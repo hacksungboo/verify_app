@@ -1,0 +1,5 @@
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30
+sqlalchemy>=2.0.36,<2.1
+oracledb>=2.5
+pyjwt>=2.9

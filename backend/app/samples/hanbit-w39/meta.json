@@ -1,0 +1,20 @@
+{
+  "id": "hanbit-w39",
+  "title": "한빛물산 주간 VOC 보고서 · 9월 4주차",
+  "description": "VOC 원문 3건과 AI가 쓴 보고서 초안. 초안에는 오류 7개가 심어져 있어요.",
+  "draft_title": "한빛물산 주간 VOC 보고서 (9월 4주차) - AI 초안",
+  "sources": [
+    {"file": "sources/01_voc_summary.md", "title": "9월 4주차 VOC 집계표"},
+    {"file": "sources/02_key_accounts.md", "title": "주요 고객사 VOC 상세"},
+    {"file": "sources/03_agent_notes.md", "title": "상담원 메모 및 조치 사항"}
+  ],
+  "ground_truth": [
+    {"match": "전주 대비 40% 증가", "error_type": "수치 부풀림", "correct": "12%"},
+    {"match": "4.6점으로 역대 최고", "error_type": "수치 변경 + 없는 사실", "correct": "4.1점"},
+    {"match": "오션푸드에서는 9월 23일", "error_type": "고객사 바꿔치기", "correct": "그린마트"},
+    {"match": "9월 28일 PG사 점검", "error_type": "날짜 이동", "correct": "9월 25일"},
+    {"match": "모든 고객이 배송 알림", "error_type": "과잉 일반화", "correct": "일부 고객"},
+    {"match": "경쟁사 대비 응답 속도", "error_type": "원문에 없는 사실", "correct": "삭제"},
+    {"match": "주말 상담 인력 5명", "error_type": "수치 부풀림", "correct": "2명"}
+  ]
+}
