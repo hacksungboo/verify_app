@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExtractedClaims",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["claims"],
+  "properties": {
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text", "source_sentence", "claim_type", "importance", "checkable"],
+        "properties": {
+          "text": { "type": "string", "description": "검증 단위 주장 (초안 표현 그대로)" },
+          "source_sentence": { "type": "string", "description": "이 주장이 나온 초안 원문장 그대로 — 위치 계산용" },
+          "claim_type": { "type": "string", "enum": ["NUMBER", "DATE", "ENTITY", "GENERALIZATION", "QUALITATIVE"] },
+          "importance": { "type": "integer", "enum": [1, 2, 3] },
+          "checkable": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

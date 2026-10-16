@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Judgement",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verdict", "evidence_chunk_id", "quote", "explanation", "confidence", "suggestion"],
+  "properties": {
+    "verdict": { "type": "string", "enum": ["SUPPORTED", "PARTIAL", "UNSUPPORTED", "CONTRADICTED"] },
+    "evidence_chunk_id": { "type": ["integer", "null"] },
+    "quote": { "type": ["string", "null"], "description": "원문 그대로 복사한 근거 문장" },
+    "explanation": { "type": "string", "description": "검수자용 한 문장 설명" },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "suggestion": { "type": ["string", "null"], "description": "원문에 맞게 고친 문장 전체" }
+  }
+}
